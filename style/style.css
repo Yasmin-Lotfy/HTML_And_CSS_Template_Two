@@ -2,7 +2,9 @@
 :root{
     --main-color:#1BBCD3;
     --main-padding:15px;
-}
+    --main-transparent:rgba(20,98,118,0.6);
+    --main-grey:#a2a2a2;
+    }
 /* End  Vraiables */
 /* Start Global Vraiables */
 *{
@@ -51,6 +53,8 @@ body{
     background-image: linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/landing.jpg);
     height: 100vh;
     background-size: cover;
+    padding-top:var(--main-padding);
+    position: relative;
 }
 .header .container{
     display: flex;
@@ -63,7 +67,7 @@ body{
 }
 .header .container::after{
     content: "";
-    background-color: #a2a2a2;
+    background-color: var(--main-grey);
     position: absolute;
     height: 1px;
     bottom:0px;
@@ -119,6 +123,118 @@ body{
     padding-left: 15px;
 
 }
+.header .container .fa-bars {
+    display: none;
+}
+
+@media(max-width:767px){
+
+    .header .container .fa-bars {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .header .container .links{
+        flex-direction: column;
+        position: absolute;
+        top: 43px;
+        left: -30px;
+        width: 100%;
+        display: none;
+    }
+    .header .container .links li{
+        padding-top:10px;
+        padding-bottom:10px;
+       
+    }
+    .header .container .fa-bars:hover + ul.links {
+        display: flex;    
+    }
+
+}
+
+/* start of the content inside the header */
+.header-cont{
+    position: absolute;
+    top:50%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: #fff;
+    width: 50%;
+    background-color: var(--main-transparent);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    padding-right: var(--main-padding);
+    padding-left: calc(var(--main-padding) + 120px);
+}
+.header-cont h2{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    font-size: 35px;
+    font-weight: 200;
+    margin: 0;
+}
+.header-cont p{
+    line-height: 1.8;
+}
+
+/* small screen */
+@media(max-width:767px){
+
+    .header-cont{
+        width: 100%
+}
+.header-cont h2{
+    font-size: 25px;
+    
+}
+.header-cont p{
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+}
+/* medium screen */
+@media(max-width:991px){
+
+    .header-cont{
+        width: 100%
+}
+.header-cont h2{
+    font-size: 25px;
+    
+}
+
+}
+.circle{
+    position: absolute;
+    top:90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+    font-size: 20px;
+}
+.circle .far{
+    color:var(--main-grey);
+}
+
+.fa-angle-right, .fa-angle-left{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: var(--main-grey);
+    font-size: 40px;
+}
+.fa-angle-right{
+    right:3%;
+
+}
+
+.fa-angle-left{
+    left:3%;
+    
+}
+
 
 
 /* End Header */
