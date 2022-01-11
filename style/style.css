@@ -139,7 +139,10 @@ body{
     justify-content:space-between;
     align-items: center;
     position: relative;
-    width:85%;
+    width:100%;
+    /* position: fixed; */
+    z-index: 100;
+    /* background-color: rgba(0,0,0,0.6); */
 }
 .header .container::after{
     content: "";
@@ -234,11 +237,7 @@ body{
     .header .container .fa-bars:hover + ul.links {
         display: flex;    
     }
-
 }
-
-
-
 /* small screen */
 @media(max-width:767px){
 
@@ -418,6 +417,9 @@ body{
 }
 /* end of our design section */
 /* start of portofolio section  */
+.potofolio {
+    padding-bottom: calc(var(--main-padding) + 40px);
+}
 .potofolio .container .porto-data{
     padding-top: calc(var(--main-padding) + 40px);
     padding-bottom: calc(var(--main-padding) + 40px);
@@ -445,10 +447,19 @@ body{
  
 .porto-images .shuffle-img {
     position: relative;
-    transition: 0.5s;
+    transition: 0.2s;
+    cursor: pointer;
+    overflow: hidden;
 }
 .porto-images .shuffle-img img{
     width:100%;
+    transition: 0.3s;
+}
+.porto-images .shuffle-img:hover img{
+    transform: scale(1.4) skewY(5deg);
+}
+.porto-images .shuffle-img:hover .shuffle-text {
+    transform: translate(0px,0px);
 
 }
 .porto-images .shuffle-img .shuffle-text{
@@ -456,14 +467,48 @@ body{
     width:100%;
     background-color: #fff;
     position: absolute;
+    padding-left: 5px;
+    transform: translate(0px,100px);
     bottom:0;
     left:0;
+    transition: 0.3s;
 }
 .porto-images .shuffle-img .shuffle-text p:last-child{
     color:var(--main-color)
 }
+/* small screen */
+@media(max-width:767px){
+    .porto-images{
+        display: block;
+        /* grid-template-columns: 1fr; */
+    }
 
+}
+/* medium screen */
+@media(max-width:991px){
+    .porto-images{
+        grid-template-columns: 1fr 1fr;
+    }
 
+}
+/* large screen */
+@media(max-width:1200px){
+    .porto-images{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.btn-more{
+    color:#fff;
+    background-color: var(--main-color);
+    padding: 10px 20px 10px;
+    border: none;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+
+}
 
 
 /* end of portofolio section  */
