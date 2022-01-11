@@ -417,5 +417,55 @@ body{
     }
 }
 /* end of our design section */
+/* start of portofolio section  */
+.potofolio .container .porto-data{
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.potofolio .container .porto-data p:first-child{
+    background-color: var(--main-color);
+    color:#fff;
+}
+.potofolio .container .porto-data p{
+   padding:10px;
+}
+
+/* start of the grid images */
+ .porto-images{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap:2px;
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+}
+ 
+.porto-images .shuffle-img {
+    position: relative;
+    transition: 0.5s;
+}
+.porto-images .shuffle-img img{
+    width:100%;
+
+}
+.porto-images .shuffle-img .shuffle-text{
+    /* display: none; */
+    width:100%;
+    background-color: #fff;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.porto-images .shuffle-img .shuffle-text p:last-child{
+    color:var(--main-color)
+}
+
+
+
+
+/* end of portofolio section  */
 
 
