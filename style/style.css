@@ -2,9 +2,12 @@
 :root{
     --main-color:#1BBCD3;
     --main-padding:15px;
-    --main-transparent:rgba(20,98,118,0.6);
+    --main-transparent:rgba(20,98,118,0.5);
     --main-grey:#a2a2a2;
     }
+    html{
+    scroll-behavior: smooth;   
+    } 
 /* End  Vraiables */
 /* Start Global Vraiables */
 *{
@@ -46,6 +49,81 @@ body{
 /* End Global Vraiables */
 /* Start Component */
 
+/* the header with circle in the bottom */
+.header-component{
+    padding-top: calc(var(--main-padding) + 20px);
+    text-align: center;
+}
+.header-component h2{
+    font-size: 35px;
+    font-weight: 200;
+    position: relative;
+}
+.header-component h2::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #000;
+    width: 11%;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-component h2::before{content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:1px solid #000;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+.header-component p{
+    margin: 0 auto;
+    width:70%;
+    padding-top: calc(var(--main-padding) + 30px);
+    color:var(--main-grey);
+    line-height: 1.6;
+    font-size: 20px;
+}
+@media(max-width:767px){
+
+.header-component p{
+    width:100%;
+    padding-bottom:10px ;
+    padding-right: 5px;
+}
+}
+
+/* start of the content inside the header */
+.header-cont{
+    width: 50%;
+    position: absolute;
+    background-color: var(--main-transparent);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    padding-right: var(--main-padding);
+    padding-left: calc(var(--main-padding) + 120px);
+    color: #fff;
+
+}
+.header-cont h2{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0;
+}
+.header-cont p{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.8;
+}
+
 /* End Component */
 /* Start Header */
 .header{
@@ -62,8 +140,6 @@ body{
     align-items: center;
     position: relative;
     width:85%;
-
-   
 }
 .header .container::after{
     content: "";
@@ -117,6 +193,13 @@ body{
 
 }
 
+.header-first{
+    top:50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
 .header .container  i{
     color: #fff;
     font-size: 20px;
@@ -154,30 +237,7 @@ body{
 
 }
 
-/* start of the content inside the header */
-.header-cont{
-    position: absolute;
-    top:50%;
-    left: 0px;
-    transform: translateY(-50%);
-    color: #fff;
-    width: 50%;
-    background-color: var(--main-transparent);
-    padding-top: var(--main-padding);
-    padding-bottom: var(--main-padding);
-    padding-right: var(--main-padding);
-    padding-left: calc(var(--main-padding) + 120px);
-}
-.header-cont h2{
-    padding-top: var(--main-padding);
-    padding-bottom: var(--main-padding);
-    font-size: 35px;
-    font-weight: 200;
-    margin: 0;
-}
-.header-cont p{
-    line-height: 1.8;
-}
+
 
 /* small screen */
 @media(max-width:767px){
@@ -235,7 +295,127 @@ body{
     left:3%;
     
 }
-
-
-
 /* End Header */
+
+/* start service section  */
+.service-cont{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: calc(var(--main-padding) + 50px);
+    padding-bottom: calc(var(--main-padding) + 50px);
+    display: grid;
+    gap:30px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.service-col{
+    display: flex;
+    align-items: flex-start;
+}
+.service-col i{
+    flex-basis: 130px;
+    font-size: 50px;
+}
+.service-col .ser-text{
+    flex:1;
+}
+
+.service-col .ser-text h2{
+    margin: 0px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.service-col .ser-text p{
+    padding-top: calc(var(--main-padding) + 10px);
+    color:var(--main-grey);
+    line-height: 1.6;
+    font-size: 17px;
+    width: 100%;
+    text-align: left;
+}
+
+/* mobile (small screen) */
+@media(max-width:767px){
+
+    .service-col{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-cont{
+        width: 50%;
+        display: block;
+    }
+    .service-col .ser-text p{
+        width:100%;
+        padding-left: 5px;
+        text-align: center;
+    }
+    .service-cont{
+        width: 90%;
+    }
+    .service-col i{
+        flex-basis: 90px;
+    }
+}
+/* end service section  */
+/* start of our design section */
+.design{
+    padding-top: calc(var(--main-padding) + 50px);
+    padding-bottom: calc(var(--main-padding) + 50px);
+}
+.design .container{
+    display: flex;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/design-features.jpg);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    position: relative; 
+    overflow: hidden;
+
+    
+}
+.design-header{
+    padding-left: calc(var(--main-padding) + 80px);
+    top:40%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.design .container .des-cont{
+    display: flex;
+    align-items: center;
+}
+.design .container .des-cont p{
+    line-height: 1.6;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.design .container .des-cont i{
+    flex-basis: 40px;
+}
+
+.design .container .des-image img{ 
+    position: absolute;
+    top:35%;
+    left:15%;
+}
+/* small screen  */
+@media(max-width:767px){
+    .design .container .des-image{ 
+        display: none;
+    }
+    .design-header{
+        padding-left: calc(var(--main-padding) + 40px);
+        width: 100%;
+    }
+    .design-header .des-cont p{
+       font-size: 20px;
+    }
+}
+/* end of our design section */
+
+
