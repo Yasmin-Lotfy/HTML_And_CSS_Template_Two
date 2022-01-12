@@ -70,7 +70,8 @@ body{
     transform: translateX(-50%);
 }
 
-.header-component h2::before{content: "";
+.header-component h2::before{
+    content: "";
     position: absolute;
     background-color: #fff;
     width: 20px;
@@ -496,9 +497,7 @@ body{
     .porto-images{
         grid-template-columns: 1fr 1fr;
     }
-
 }
-
 .btn-more{
     color:#fff;
     background-color: var(--main-color);
@@ -508,10 +507,120 @@ body{
     left:50%;
     transform: translateX(-50%);
     cursor: pointer;
-
+}
+/* Start of the video part */
+.moving-part {
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+}
+.moving-part .container {
+    width: 100%; 
+    padding: 0px;
+    margin: 0px;
+}
+.moving-part .container .vid-moving{
+    width: 100%;
+    position: relative;
+}
+.moving-part .container .vid-moving video{
+    height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.moving-part .container .header-vid{
+    position: absolute;
+    width: 100%;
+    bottom:10%;
+    padding: 0px 0px 30px 0px;
+    left:0%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.moving-part .container .header-vid .vid-btn{
+    padding: 10px 20px 10px;
+    color:#fff;
+    background-color: #000;
+    border: none;
+}
+/* end of portofolio section  */
+/* Start of about us section  */
+.about-us{ 
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+}
+.about-us .about-cont{
+    background-image: linear-gradient(90deg ,rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/stats.png);
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.about-us .container{
+    margin-bottom: calc(var(--main-padding) + 270px);
+}
+.about-us .about-cont .floating-img{
+    flex-basis: 300px;
+    position: absolute;
+    top:-2%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    
+}
+.about-us .about-cont .floating-img img{
+    width:100%;
 }
 
+.about-cont .about-sub-cont{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+    color: #fff;
+    text-align: center;
+    background-color: var(--main-transparent);
+    position: absolute;
+    width:80%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.about-cont .about-sub-cont .about-float{
+   padding: 20px 70px 20px;
+   text-align: center;
+    
+}
+.about-cont .about-sub-cont .about-float i{
+    color:#000;
+    font-size:30px;
+}
+.about-cont .about-sub-cont .about-float h2{
+    font-size:40px;
+}
+@media(max-width:767px){
+    .about-cont .about-sub-cont .about-float{
+        padding: 5px 10px 5px;
+         
+     }
+     .about-cont .about-sub-cont{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+     .about-cont .about-sub-cont .about-float i{
+        color:#000;
+        font-size:20px;
+    }
+    .about-cont .about-sub-cont .about-float h2{
+        font-size:30px;
+    }
+    
+    
+}
 
-/* end of portofolio section  */
-
+/* End of about us section  */
 
