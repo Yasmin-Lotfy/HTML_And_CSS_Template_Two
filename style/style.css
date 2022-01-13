@@ -617,10 +617,13 @@ body{
     }
     .about-cont .about-sub-cont .about-float h2{
         font-size:30px;
-    }
-    
-    
+    }   
 }
 
 /* End of about us section  */
+/* start of skills section */
+.container.container .row-skills{
+    display: flex;
 
+}
+/* end of skills section */
