@@ -622,8 +622,168 @@ body{
 
 /* End of about us section  */
 /* start of skills section */
-.container.container .row-skills{
+.skills {
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+}
+.skills .container {
+    width:85%;
+}
+
+
+.skills .container .row-skills{
     display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.skills .container .row-skills .col-testmonials{
+    width:45%;
+}
+.skills .container .row-skills .col-testmonials .test-text h2{
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+}
+.skills .container .row-skills .col-testmonials .test-text p{
+    color: var(--main-grey);
+    line-height: 1.8;
+    padding-bottom: calc(var(--main-padding) +40px);
+    text-align: center;
+}
+.skills .container .row-skills .col-testmonials .sub-test .test-person{
+    display:flex;
+    align-items: flex-start;
+}
+.skills .container .row-skills .col-testmonials .sub-test .test-person img{
+    width:90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.skills .container .row-skills .col-testmonials .sub-test .test-person p{
+    line-height: 1.6;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: calc(var(--main-padding) + 0px );
+    border-bottom: 1px solid var(--main-grey);
+}
+.skills .container .row-skills .col-testmonials .sub-test .test-person p span{
+    display: block;
+    padding-top:20px;
+    text-align: right;
+    color: var(--main-grey);
+}
+.skills .container .row-skills .col-testmonials .test-circle{
+    text-align: center;
+    padding-top: 20px;
+    color: var(--main-color);
+    padding-right: 4px;
+}
+.skills .container .row-skills .col-testmonials .test-circle .fa{
+    margin-right: 4px;
+}
+
+/* the second column  */
+/* adobe */
+.skills .container .row-skills .col-testmonials .languages .language-score{
+    height: 30px;
+    width: 100%;
+    position: relative;
+}
+.skills .container .row-skills .col-testmonials .languages .adobe{
+    background-image: linear-gradient(to right,
+    var(--main-color) 90%,
+    var(--main-grey) 90%); 
+}
+.skills .container .row-skills .col-testmonials .languages .html{  
+    background-image: linear-gradient(to right,
+    var(--main-color) 85%,
+    var(--main-grey) 85%);
+}
+.skills .container .row-skills .col-testmonials .languages .java{  
+    background-image: linear-gradient(to right,
+    var(--main-color) 80%,
+    var(--main-grey) 80%);
+}
+.skills .container .row-skills .col-testmonials .languages .php{  
+    background-image: linear-gradient(to right,
+    var(--main-color) 90%,
+    var(--main-grey) 90%);
+}
+/* square styling */
+.skills .container .row-skills .col-testmonials .languages .language-score::after{
+    position: absolute;
+    width:40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skills .container .row-skills .col-testmonials .languages .adobe::after{
+    content: "90%";
+    top:-150%;
+    left:calc(90% - 20px);
+}
+
+.skills .container .row-skills .col-testmonials .languages .html::after{
+    content: "85%";
+    top:-150%;
+    left:calc(85% - 20px); 
+}
+.skills .container .row-skills .col-testmonials .languages .java::after{
+    content: "80%";
+    top:-150%;
+    left:calc(80% - 20px); 
+}
+.skills .container .row-skills .col-testmonials .languages .php::after{
+    content: "90%";
+    top:-150%;
+    left:calc(90% - 20px); 
+}
+/* arrow styling  */
+.skills .container .row-skills .col-testmonials .languages .language-score::before{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px;
+    border-color: black transparent transparent transparent;
+    
+}
+
+.skills .container .row-skills .col-testmonials .languages .adobe::before{
+    top: -94%;
+    left: calc(90% - 20px);
+}
+.skills .container .row-skills .col-testmonials .languages .html::before{
+    top: -94%;
+    left: calc(85% - 20px);
+}
+.skills .container .row-skills .col-testmonials .languages .java::before{
+    top: -94%;
+    left: calc(80% - 20px);
+}
+.skills .container .row-skills .col-testmonials .languages .php::before{
+    top: -94%;
+    left: calc(90% - 20px);
+}
+/* medium screen */
+@media(max-width:991px){
+    .skills .container .row-skills{
+        flex-direction: column;
+    }
+    .skills .container .row-skills .col-testmonials{
+        width: 90%;
+    }
+    .skills .container .row-skills .col-testmonials .sub-test .test-person{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 /* end of skills section */
