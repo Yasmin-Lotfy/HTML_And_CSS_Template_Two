@@ -593,7 +593,7 @@ body{
    text-align: center;
     
 }
-.about-cont .about-sub-cont .about-float i{
+.about-cont .about-sub-cont .about-float i:first-child{
     color:#000;
     font-size:30px;
 }
@@ -611,7 +611,7 @@ body{
         align-items: center;
         justify-content: center;
     }
-     .about-cont .about-sub-cont .about-float i{
+     .about-cont .about-sub-cont .about-float i:first-child{
         color:#000;
         font-size:20px;
     }
@@ -786,4 +786,225 @@ body{
     }
 
 }
+/* start of the banner  */
+.banner{
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/quote.jpg);
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.banner .banner-cont{
+  width:70%;
+  margin: 0 auto;
+  color:#fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize; 
+ 
+}
+.banner .banner-cont q{
+    line-height: 1.8; 
+    font-size: 27px;
+    font-weight: 100;
+     
+}
+  
+/* end of the banner */
 /* end of skills section */
+/* start of the pricing section  */
+
+.pricing {
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 60px);
+}
+.pricing .container {
+   text-align: center; 
+   width: 90%;
+   margin: 0 auto; 
+}
+.pricing .container .pricing-grid {
+    text-align: center; 
+    width: 100%;
+    margin: 0 auto;
+    padding-top: calc(var(--main-padding) + 70px);
+    padding-bottom: calc(var(--main-padding) + 40px);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap:30px
+}
+.pricing .container .pricing-grid .price-head {
+    padding: 40px 4px ;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .pricing-grid .price-head p{
+    font-size: 22px;
+    padding: 0px;
+    margin: 0px;
+}
+.pricing .container .pricing-grid .price-head h2{
+    font-size: 60px;
+    padding-top: 10px;
+    margin: 0px;
+    position: relative;
+}
+.pricing .container .pricing-grid .price-head h2::after{
+    content: "$";
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    font-size: 33px;
+    font-weight: 200;
+}
+
+.pricing .container .pricing-grid .price-head h2::before{
+    content: "/MO";
+    position: absolute;
+    bottom: 0%;
+    right: 13%;
+    font-size: 25px;
+    font-weight: 300;
+}
+.pricing .container .pricing-grid .price-feature{
+    border-bottom: 1px solid var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.pricing .container .pricing-grid .price-feature p{
+    border-bottom: 1px solid var(--main-color);
+    padding-top:8px;
+    padding-bottom: 8px;
+    width:55%;
+    text-align: center;
+}
+.pricing .container .pricing-grid .price-feature p:last-child{
+    border-bottom: none;
+}
+.pricing .container .pricing-grid .price-btn{
+    padding-top:35px;
+    padding-bottom: 8px;
+}
+.pricing .container .pricing-grid .price-btn button{
+    padding: 15px 20px;
+    background-color: transparent;
+    
+    border:1px solid var(--main-color);
+    cursor: pointer;
+}
+.pricing .container .contact-price .center{
+    position: static;
+    transform: translateX(0%);
+}
+/* end of the pricing section  */
+/* start of subscribe section  */
+.subscribe{
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 60px);
+}
+.subscribe .sub-img{
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/subscribe.jpg);
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.subscribe .sub-img .sub-cont .container{
+    color: #fff;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+ }
+.subscribe .sub-img .sub-cont .container form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding:0px;
+    margin:0px;
+    color: #fff;
+    width:40%;
+    position: relative;
+}
+
+.subscribe .sub-img .sub-cont .container form i:first-child{
+    color: #fff;
+    font-size: 22px;
+    
+}
+.subscribe .sub-img .sub-cont .container form .fa-envelope::before{
+    content:"\f0e0";
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:2%;
+
+}
+.subscribe .sub-img .sub-cont .container form input{
+    padding: 20px 30px;
+    margin: 0px;
+    background-color: transparent;
+    outline: none;
+    border:1px solid var(--main-color);
+    width:calc(100% + 10px);
+    color: #fff;
+}
+.subscribe .sub-img .sub-cont .container form input::placeholder{
+    color: #fff;
+    padding-left: 20px;
+    position:relative;
+}
+
+.subscribe .sub-img .sub-cont .container form submit{
+    background-color: var(--main-color);
+    padding: 20px 30px;
+    border:1px solid var(--main-color);
+    cursor: pointer;
+}
+  
+.subscribe .sub-img .sub-cont .container p{
+    padding:0px;
+    margin:0px;
+    margin-left: 50px;
+    text-align: left;
+    line-height: 1.8;
+    width:40%;
+}
+@media (max-width:991px){
+    .subscribe .sub-img .sub-cont .container{
+        flex-direction: column;
+     }
+     .subscribe .sub-img .sub-cont .container form{
+        width:80%;
+     }
+     .subscribe .sub-img .sub-cont .container p{ 
+         margin-top: 20px;
+        width:80%;
+     }
+     .subscribe .sub-img .sub-cont .container form i{
+        left:22%;
+    }
+}
+/* end of subscribe section  */
+/* start of contact us  */
+.contact-us {
+    padding-top: calc(var(--main-padding) + 40px);
+    padding-bottom: calc(var(--main-padding) + 60px);
+}
+.contact-us .container {
+   text-align: center; 
+   width: 90%;
+   margin: 0 auto; 
+}
+
+/* end of contact us  */
